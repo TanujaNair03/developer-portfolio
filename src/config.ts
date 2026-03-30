@@ -1,191 +1,171 @@
 export const config = {
     developer: {
-        name: "Redoyanul",
-        fullName: "Redoyanul Haque",
-        title: "AI & Full-Stack Developer",
-        description: "AI & Full-Stack Developer building intelligent systems and modern web applications. Passionate about machine learning, deep learning, and creating next-gen autonomous agents."
+        name: "Tanuja",
+        fullName: "Tanuja Nair",
+        title: "Data Scientist & AI Engineer",
+        description: "B.Sc. Data Science & Applications | IIT Madras. I enjoy building end-to-end ML systems, agentic AI workflows, analytics products, and data-driven tools that solve real business problems."
     },
     social: {
-        github: "red1-for-hek",
-        email: "redoyanul1234@gmail.com",
-        location: "Bangladesh"
+        github: "TanujaNair03",
+        email: "tanuja.nair13@gmail.com",
+        location: "India"
     },
     about: {
         title: "About Me",
-        description: "I am a self-taught AI & Full-Stack Developer from Bangladesh. I build intelligent systems, chatbots, and modern web applications. My expertise includes Machine Learning, Deep Learning, NLP, and Full-Stack Web Development with React, Node.js, and Python. Currently building next-gen AI Agents and JARVIS-like Personal Assistants. I have a competitive programming mindset and a deep passion for automation. Code is poetry, AI is the canvas."
+        description: "I recently graduated from IIT Madras, and was ranked in the Top 1% (6/800+) in Business Data Management Capstone and Top 2% (15/1300+) in my ML Project. I enjoy building end-to-end ML systems, agentic AI workflows, analytics products, and data-driven tools that solve real business problems. My core focus lies in Agentic AI, Applied Machine Learning, Computer Vision, MLOps, and Decision-focused Analytics."
     },
     experiences: [
         {
-            position: "Learning Something New",
-            company: "Self-Development",
-            period: "2025 - Present",
-            location: "Bangladesh",
-            description: "Continuously exploring emerging technologies, researching advanced AI systems, and pushing the boundaries of what's possible in tech.",
+            position: "Data Science Intern",
+            company: "Nestlé",
+            period: "Nov 2024 - Oct 2025",
+            location: "Chennai, India",
+            description: "Engineered an automated fraud detection pipeline and built a 'Cost to Serve' BI dashboard.",
             responsibilities: [
-                "Researching cutting-edge AI and ML technologies",
-                "Experimenting with new frameworks and tools",
-                "Contributing to open-source projects",
-                "Building innovative personal projects"
+                "Engineered an automated fraud detection pipeline for a large-scale dataset covering 9,00,000+ pan-India outlets identifying root causes of fraudulent activity to drive operational improvement.",
+                "Built a 'Cost to Serve' Power BI dashboard to sales & strategy stakeholders, identifying granular cost optimisations signed off by the National Sales Controller for implementation.",
+                "Developed a regression-based ML model to analyse promotion effectiveness and deliver actionable discount optimisation strategies across large-scale sales data."
             ],
-            technologies: ["Research", "Innovation", "Open Source", "New Tech"]
+            technologies: ["Python", "Power BI", "SQL", "Machine Learning", "Pipeline Development"]
         },
         {
-            position: "AI Engineer",
-            company: "Freelance & Projects",
-            period: "2025",
-            location: "Bangladesh",
-            description: "Developing intelligent AI systems, chatbots, and machine learning solutions. Building next-gen conversational AI agents and JARVIS-like personal assistants.",
+            position: "Machine Learning Intern",
+            company: "Ford Motor Company",
+            period: "Aug 2022 - Feb 2023",
+            location: "Chennai, India",
+            description: "Built an end-to-end ML model for early identification of vehicle recall events.",
             responsibilities: [
-                "Building AI-powered chatbots and conversational agents",
-                "Developing machine learning models with TensorFlow and PyTorch",
-                "Working with LLMs and transformer architectures",
-                "Creating autonomous AI systems and automation tools"
+                "Built an end-to-end ML model on US market product data for early identification of vehicle recall events, with robust data quality checks and statistical validation.",
+                "Performed statistical analysis to identify key patterns in consumer behaviour, delivering actionable recommendations that directly optimised sales-channel strategy."
             ],
-            technologies: ["Python", "TensorFlow", "PyTorch", "LLMs", "NLP", "AI Agents"]
+            technologies: ["Python", "Machine Learning", "Statistical Analysis", "Data Quality"]
         },
         {
-            position: "Full-Stack Developer",
-            company: "Freelance & Projects",
-            period: "2024",
-            location: "Bangladesh",
-            description: "Built complete web applications from frontend to backend. Developed responsive UIs, RESTful APIs, and database solutions for various clients and projects.",
+            position: "Python Development Intern",
+            company: "Learn With Leaders",
+            period: "Sep 2021 - Feb 2022",
+            location: "Chennai, India",
+            description: "Developed automated data preprocessing modules and backend logic for an assessment tool.",
             responsibilities: [
-                "Developing full-stack web applications using React and Node.js",
-                "Building RESTful APIs and integrating databases",
-                "Creating responsive and interactive user interfaces",
-                "Deploying and maintaining web applications"
+                "Developed a standardised data preprocessing module in Python, automating cleaning tasks across all company projects and reducing manual effort by an average of 170 minutes per project.",
+                "Engineered backend logic for a voice-interactive assessment tool using Google Cloud NLP, automating English proficiency grading for 1,000+ global users."
             ],
-            technologies: ["React", "Node.js", "MongoDB", "Express", "Next.js", "TypeScript"]
-        },
-        {
-            position: "Python Developer",
-            company: "Self-Taught & Projects",
-            period: "2023",
-            location: "Bangladesh",
-            description: "Dove deep into Python programming, building automation scripts, bots, and mastering the fundamentals of software development and problem-solving.",
-            responsibilities: [
-                "Learning Python programming and core concepts",
-                "Building automation scripts and Discord bots",
-                "Exploring data structures and algorithms",
-                "Participating in competitive programming"
-            ],
-            technologies: ["Python", "Automation", "Scripting", "Discord.py", "Problem Solving"]
-        },
-        {
-            position: "Graphic Designer",
-            company: "Freelance",
-            period: "2022",
-            location: "Bangladesh",
-            description: "Started my creative journey as a graphic designer, creating logos, banners, and visual content. This sparked my passion for technology and digital creation.",
-            responsibilities: [
-                "Designing logos and brand identity materials",
-                "Creating social media graphics and banners",
-                "Working with clients on creative projects",
-                "Learning design principles and visual aesthetics"
-            ],
-            technologies: ["Photoshop", "Illustrator", "Canva", "Figma", "Visual Design"]
-        },
-        {
-            position: "Microsoft Office",
-            company: "Begin Learning",
-            period: "2021",
-            location: "Bangladesh",
-            description: "Started my journey into the digital world by learning Microsoft Office tools. This foundational step introduced me to computers and sparked my curiosity for technology.",
-            responsibilities: [
-                "Learning Microsoft Word, Excel, and PowerPoint",
-                "Creating documents and presentations",
-                "Understanding basic computer operations",
-                "Building foundational digital skills"
-            ],
-            technologies: ["MS Word", "MS Excel", "MS PowerPoint", "Computer Basics"]
+            technologies: ["Python", "Google Cloud NLP", "Automation", "Backend Logic"]
         }
     ],
     projects: [
         {
             id: 1,
-            title: "Drishti",
-            category: "AI / LLM",
-            technologies: "Python, PyTorch, Transformers, FastAPI, React, MongoDB",
-            image: "/images/drishti.png",
-            description: "Bangladesh's first intelligent advanced AI chatbot powered by a custom Large Language Model. Features natural language understanding, contextual conversations, and multilingual support including Bengali."
+            title: "Claims Adjudication Agent",
+            category: "Agentic AI",
+            technologies: "LangGraph, LangChain, FastAPI, Gemini 2.5 Flash, Streamlit",
+            image: "/images/proj_1_claims.png",
+            description: "Production-grade agentic medical claims engine with fraud detection, semantic clinical review, and live deployment.",
+            link: "https://github.com/TanujaNair03/Claims_Adjucation_Agent"
         },
         {
             id: 2,
-            title: "VoteChain",
-            category: "Blockchain",
-            technologies: "Solidity, Web3.js, React, Ethereum, IPFS, MetaMask, Node.js",
-            image: "/images/votechain.png",
-            description: "A decentralized election system built on blockchain technology ensuring transparent, tamper-proof, and verifiable voting. Features smart contracts for vote integrity and real-time result tracking."
+            title: "Agentic CX Support Router",
+            category: "Agentic AI",
+            technologies: "LangGraph, LangChain, ChromaDB, Gemini, Streamlit, pytest",
+            image: "/images/proj_2_router.png",
+            description: "Intent-routing workflow with RAG-powered FAQ retrieval, structured human-escalation payloads, heuristic fallback for quota failures, and pytest-validated routing logic.",
+            link: "https://github.com/TanujaNair03/Customer-Experience-Agent"
         },
         {
             id: 3,
-            title: "EIE - Earthquake Impact Estimator",
-            category: "IoT / Hardware",
-            technologies: "Arduino, C++, IoT Sensors, Python, ML, React",
-            image: "/images/eie.png",
-            description: "A practical circuit-based IoT system utilizing Arduino to predict earthquakes before they strike. Integrates hardware sensors for real-time seismic detection and impact estimation."
+            title: "Production MLOps Pipeline",
+            category: "MLOps",
+            technologies: "FastAPI, GKE, Docker, GitHub Actions, Fairlearn, SHAP",
+            image: "/images/proj_3_mlops.png",
+            description: "Production ML system with CI/CD, HPA auto-scaling (1–3 pods), SHAP explainability, fairlearn bias auditing, Prometheus observability, and KS-test drift detection.",
+            link: "https://github.com/TanujaNair03/Heart_Disease_Prediction-MLOps"
         },
         {
             id: 4,
-            title: "GameKroy",
-            category: "Full Stack",
-            technologies: "React, Node.js, MongoDB, Express, Stripe, TailwindCSS",
-            image: "/images/gamekroy.png",
-            description: "A full-featured e-commerce platform for gaming products. Includes user authentication, product catalog, shopping cart, secure payments, order tracking, and admin dashboard."
+            title: "Cricket Player Tracking",
+            category: "Computer Vision",
+            technologies: "YOLOv11, ByteTrack, OpenCV, Homography",
+            image: "/images/proj_4_cricket.png",
+            description: "Fine-tuned player detection with persistent multi-object tracking and 3D-to-2D spatial projection onto a bird's-eye field view.",
+            link: "https://github.com/TanujaNair03/Cricket-Player-Tracking-Projection"
         },
         {
             id: 5,
-            title: "RedxChess",
-            category: "AI / Game Engine",
-            technologies: "Python, C++, Neural Networks, Bitboards, UCI Protocol",
-            image: "/images/redxchess.png",
-            description: "A high-performance chess engine rated 3640 ELO. Features advanced search algorithms, neural network evaluation, and optimized bitboard representation for lightning-fast move generation."
+            title: "Vision-Assist",
+            category: "Computer Vision",
+            technologies: "YOLOv8, ByteTrack, gTTS, OpenCV",
+            image: "/images/proj_5_vision.png",
+            description: "Navigation aid for the visually impaired fine-tuned on COCO + custom YouTube frames dataset; real-time multi-object tracking with distance estimation and spoken navigation cues.",
+            link: "https://github.com/TanujaNair03/VisionAssist"
         },
         {
             id: 6,
-            title: "Floodhub",
-            category: "AI / ML",
-            technologies: "Python, TensorFlow, Pandas, React, FastAPI, GIS",
-            image: "/images/floodhub.png",
-            description: "A flood prediction model specifically designed for Bangladesh's river systems. Analyzes weather patterns, water levels, and historical data to provide accurate flood forecasts and alerts."
+            title: "Gemini RAG Chatbot",
+            category: "Agentic AI",
+            technologies: "LangChain, Gemini API, Streamlit, RAG",
+            image: "/images/proj_6_rag.png",
+            description: "Multi-mode chatbot using Google Gemini & Retrieval-Augmented Generation (RAG).",
+            link: "https://github.com/TanujaNair03/gemini-rag-chatbot"
         },
         {
             id: 7,
-            title: "Phoenix",
-            category: "AI Assistant",
-            technologies: "Python, Speech Recognition, PyAutoGUI, OpenAI API, Tkinter",
-            image: "/images/phoenix.png",
-            description: "A JARVIS-inspired personal AI desktop assistant. Controls system functions, manages tasks, answers queries, automates workflows, and provides voice-activated computing experience."
+            title: "HoneyComb Agents",
+            category: "Agentic AI",
+            technologies: "Python, Hive, LLM Agents",
+            image: "/images/proj_7_honeycomb.png",
+            description: "A growing collection of focused mini AI agents for HoneyComb-style bounties with structured outputs and Hive-based packaging.",
+            link: "https://github.com/TanujaNair03/honeycomb-agents"
+        },
+
+        {
+            id: 12,
+            title: "Iris CI/CD Pipeline",
+            category: "MLOps",
+            technologies: "GitHub Actions, Docker, DVC",
+            image: "/images/proj_8_iris.png",
+            description: "Complete MLOps workflow with automated stress testing on GKE.",
+            link: "https://github.com/TanujaNair03/mlops-course"
         },
         {
-            id: 8,
-            title: "HekTools",
-            category: "Security / Android",
-            technologies: "Kotlin, Android SDK, Firebase, Python, Encryption",
-            image: "/images/hektools.png",
-            description: "An advanced Android monitoring and security research tool. Features remote device management, activity logging, and encrypted data transmission for security testing purposes."
+            id: 13,
+            title: "SAVVY Finance",
+            category: "Full Stack",
+            technologies: "Vue.js, Flask, Redis",
+            image: "/images/proj_9_savvy.png",
+            description: "AI-powered financial literacy app for kids with automated progress reports.",
+            link: "https://github.com/TanujaNair03/SAVVY"
+        },
+        {
+            id: 14,
+            title: "Sorted App",
+            category: "Full Stack",
+            technologies: "Flask, JavaScript, SQLite",
+            image: "/images/proj_10_sorted.png",
+            description: "Full-stack app connecting customers with service professionals.",
+            link: "https://github.com/TanujaNair03/Sorted"
         }
     ],
     contact: {
-        email: "redoyanul1234@gmail.com",
-        github: "https://github.com/red1-for-hek",
-        linkedin: "https://linkedin.com/in/red1-for-hek",
-        twitter: "https://x.com/red_1_ul",
-        facebook: "https://www.facebook.com/redoyanulhaque.hacker.official",
-        instagram: "https://www.instagram.com/red_1_ul"
+        email: "tanuja.nair13@gmail.com",
+        github: "https://github.com/TanujaNair03",
+        linkedin: "https://www.linkedin.com/in/tanuja-nair-b36154210/",
+        twitter: "",
+        facebook: "",
+        instagram: ""
     },
     skills: {
         develop: {
-            title: "AI DEVELOPER",
-            description: "Building intelligent systems & AI solutions",
-            details: "Developing AI agents, chatbots, and machine learning models using Python, TensorFlow, and PyTorch. Specializing in LLMs, NLP, deep learning, and autonomous systems.",
-            tools: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "LLMs", "NLP", "Deep Learning", "Chatbots", "AI Agents"]
+            title: "DATA SCIENTIST",
+            description: "Building ML systems & AI solutions",
+            details: "Specialised in Agentic AI, Computer Vision, and End-to-end Machine Learning pipelines. Experienced with Deep Learning and Recommendation Systems.",
+            tools: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "NLP", "YOLOv8", "LangChain", "LangGraph", "ChromaDB", "Gemini 2.5"]
         },
         design: {
-            title: "FULL-STACK",
-            description: "Modern web development & scalable applications",
-            details: "Building responsive and performant web applications using React, Next.js, Node.js, and databases. Creating seamless user experiences with modern UI/UX principles.",
-            tools: ["React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "TailwindCSS", "REST APIs", "Docker", "Git"]
+            title: "DATA & MLOPS",
+            description: "Cloud infrastructure & visualization",
+            details: "Deploying highly scalable models using Kubernetes and Docker. Managing data engineering with Cloud providers and designing meaningful Power BI dashboards.",
+            tools: ["FastAPI", "Docker", "Kubernetes", "GCP", "Azure", "Power BI", "Tableau", "Streamlit", "SQL", "PySpark", "CI/CD"]
         }
     }
 };

@@ -3,7 +3,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import Lenis from "lenis";
+import { config } from "../config";
 import "./styles/Navbar.css";
+import { FaGithub } from "react-icons/fa6";
+import { ShimmerButton } from "./ui/ShimmerButton";
 
 gsap.registerPlugin(ScrollTrigger);
 export let lenis: Lenis | null = null;
@@ -22,18 +25,14 @@ const Navbar = () => {
       infinite: false,
     });
 
-    // Start paused
     lenis.stop();
-
-    // Handle smooth scroll animation frame
     function raf(time: number) {
       lenis?.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
 
-    // Handle navigation links
-    let links = document.querySelectorAll(".header ul a");
+    let links = document.querySelectorAll(".header ul a.scroll-link");
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
@@ -54,7 +53,6 @@ const Navbar = () => {
       });
     });
 
-    // Handle resize
     window.addEventListener("resize", () => {
       lenis?.resize();
     });
@@ -67,29 +65,46 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+          Tanuja
         </a>
         <a
-          href="mailto:redoyanul1234@gmail.com"
+          href={`mailto:${config.social.email}`}
           className="navbar-connect"
           data-cursor="disable"
         >
-          redoyanul1234@gmail.com
+          {config.social.email}
         </a>
-        <ul>
+        <ul className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
           <li>
-            <a data-href="#about" href="#about">
-              <HoverLinks text="ABOUT" />
+            <a data-href="#career" href="#career" className="scroll-link">
+              <HoverLinks text="EXPERIENCE" />
             </a>
           </li>
           <li>
-            <a data-href="#work" href="#work">
-              <HoverLinks text="WORK" />
+            <a data-href="#work" href="#work" className="scroll-link">
+              <HoverLinks text="PROJECTS" />
             </a>
           </li>
           <li>
-            <a data-href="#contact" href="#contact">
-              <HoverLinks text="CONTACT" />
+            <a 
+              href={config.contact.github} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style={{ display: 'flex', alignItems: 'center', fontSize: '1.4rem', color: '#fff', textDecoration: 'none' }}
+              data-cursor="pointer"
+            >
+              <FaGithub />
+            </a>
+          </li>
+          <li>
+            <a 
+              href={config.contact.linkedin} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              data-cursor="pointer"
+              style={{ textDecoration: 'none' }}
+            >
+              <ShimmerButton>Hire Me</ShimmerButton>
             </a>
           </li>
         </ul>

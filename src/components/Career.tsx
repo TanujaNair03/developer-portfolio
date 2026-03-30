@@ -1,17 +1,9 @@
 import "./styles/Career.css";
 import { config } from "../config";
 
-const getDisplayYear = (period: string) => {
-  if (period.includes("Present")) return "NOW";
-  if (period.includes(" - ")) {
-    return period.split(" - ")[0]; // Show start year for ranges
-  }
-  return period; // Single year like "2021"
-};
-
 const Career = () => {
   return (
-    <div className="career-section section-container">
+    <div id="career" className="career-section section-container">
       <div className="career-container">
         <h2>
           My career <span>&</span>
@@ -23,14 +15,21 @@ const Career = () => {
           </div>
           {config.experiences.map((exp, index) => (
             <div key={index} className="career-info-box">
-              <div className="career-info-in">
+              <div className="career-info-left">
+                <h3 className="career-date">{exp.period}</h3>
+              </div>
+              
+              <div className="career-info-right">
                 <div className="career-role">
                   <h4>{exp.position}</h4>
                   <h5>{exp.company}</h5>
                 </div>
-                <h3>{getDisplayYear(exp.period)}</h3>
+                <ul className="career-responsibilities">
+                  {exp.responsibilities.map((resp, i) => (
+                    <li key={i}>{resp}</li>
+                  ))}
+                </ul>
               </div>
-              <p>{exp.description}</p>
             </div>
           ))}
         </div>

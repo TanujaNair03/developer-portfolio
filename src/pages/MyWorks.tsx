@@ -17,7 +17,17 @@ const MyWorks = () => {
 
       <div className="myworks-grid">
         {config.projects.map((project, index) => (
-          <div className="myworks-card" key={project.id} data-cursor="disable">
+          <div 
+            className="myworks-card" 
+            key={project.id} 
+            data-cursor="disable"
+            onClick={() => {
+              if (project.link) {
+                window.open(project.link, "_blank");
+              }
+            }}
+            style={{ cursor: project.link ? 'pointer' : 'default' }}
+          >
             <div className="myworks-card-number">0{index + 1}</div>
             <div className="myworks-card-image">
               <img src={project.image} alt={project.title} />

@@ -66,7 +66,16 @@ const Work = () => {
         </h2>
         <div className="work-flex">
           {config.projects.slice(0, 5).map((project, index) => (
-            <div className="work-box" key={project.id}>
+            <div 
+              className="work-box" 
+              key={project.id}
+              onClick={() => {
+                if (project.link) {
+                  window.open(project.link, "_blank");
+                }
+              }}
+              style={{ cursor: project.link ? 'pointer' : 'default' }}
+            >
               <div className="work-info">
                 <div className="work-title">
                   <h3>0{index + 1}</h3>
