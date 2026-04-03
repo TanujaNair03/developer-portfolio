@@ -39,13 +39,13 @@
 }
 
 .cta-btn-hire {
-  background: var(--accentColor);
+  background: var(--highlightColor);
   color: #000;
-  border: 1px solid var(--accentColor);
+  border: 1px solid var(--highlightColor);
 }
 
 .cta-btn-hire:hover {
-  box-shadow: 0 8px 30px rgba(194, 164, 255, 0.35);
+  box-shadow: 0 8px 30px rgba(233, 204, 177, 0.35);
   transform: translateY(-2px);
 }
 

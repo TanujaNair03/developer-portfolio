@@ -33,15 +33,15 @@
 }
 
 .work-box {
-  padding: 80px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
   width: 600px;
   box-sizing: border-box;
   border-right: 1px solid #363636;
   flex-shrink: 0;
-  gap: 50px;
-  justify-content: start;
+  min-height: 460px;
+  justify-content: center;
 }
 
 .work-flex .work-box:nth-child(even) {
@@ -64,11 +64,24 @@
   top: 100%;
 }
 
+/* Card text content */
+.work-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #1b180f;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 16px;
+}
+
 .work-title {
   justify-content: space-between;
   display: flex;
   width: 100%;
   margin-bottom: 20px;
+  gap: 16px;
+  align-items: flex-end;
 }
 
 .work-title>div {
@@ -76,85 +89,138 @@
 }
 
 .work-title h3 {
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 46px;
+  line-height: 46px;
   margin: 0;
   font-weight: 600;
+  color: #1b180f;
 }
 
-.work-info h4 {
+.work-card-text h4 {
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
+  color: #3b270c;
 }
 
-.work-info p {
-  font-weight: 200;
-  color: #adacac;
+.work-card-text p {
+  font-weight: 400;
+  color: #1b180f;
   margin: 0;
-  margin-top: 3px;
+  letter-spacing: 0.05em;
 }
 
-.work-info>p {
-  width: 90%;
-}
-
-.work-image {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.work-image-in {
+/* code hover card styles */
+.code-hover-card {
   position: relative;
-}
-
-.work-link {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-color: var(--backgroundColor);
-  width: 50px;
-  border-radius: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5),
-    inset 0px 0px 10px 0px #393939;
-  transition: 0.3s;
+  gap: 0;
+}
+
+.code-hover-core {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(96, 68, 32, 0.06), rgba(246, 243, 231, 1));
+  border: 1px solid rgba(59, 39, 12, 0.2);
+  overflow: hidden;
+  cursor: none;
+  transition: transform 0.3s ease;
+}
+
+.code-hover-card:hover .code-hover-core {
+  transform: translateY(-5px);
+}
+
+.code-hover-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  color: #ffffff;
   opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.work-image a:hover {
-  color: inherit;
+.code-hover-card:hover .code-hover-icon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.15);
 }
 
-.work-image a:hover .work-link {
+.code-hover-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 32px;
+  color: #1b180f;
+  font-size: 10px;
+  line-height: 1.4;
+  font-family: "Space Mono", monospace;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  white-space: pre-wrap;
+  letter-spacing: 0.2em;
+}
+
+.code-hover-card:hover .code-hover-overlay {
   opacity: 1;
 }
 
-.work-image video {
+.code-hover-info {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #000;
-  object-fit: cover;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #3b270c;
+  z-index: 6;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
 }
 
-.work-image img {
-  max-width: 100%;
-  max-height: 350px;
+.code-hover-card:hover .code-hover-info {
+  opacity: 0;
 }
 
+.work-card-text>p {
+  width: 90%;
+}
+
+.work-tools {
+  margin-top: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 14px;
+  color: #3b270c;
+}
+
+.work-tools h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #595900;
+}
+
+.work-tools p {
+  margin: 0;
+  color: #1b180f;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+}
 @media only screen and (max-height: 900px) {
-  .work-image img {
-    max-height: 250px;
-  }
-
   .work-box {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -172,11 +238,11 @@
     font-size: 35px;
   }
 
-  .work-info p {
+  .work-card-text p {
     font-size: 13px;
   }
 
-  .work-info h4 {
+  .work-card-text h4 {
     font-size: 15px;
   }
 
@@ -208,10 +274,6 @@
 }
 
 @media only screen and (max-height: 650px) {
-  .work-image img {
-    max-height: 200px;
-  }
-
   .work-section h2 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -223,9 +285,6 @@
 }
 
 /* @media only screen and (max-width: 900px) {
-  .work-image img {
-    max-height: 200px;
-  }
   .work-section h2 {
     font-size: 40px;
     margin-bottom: 20px;
@@ -263,32 +322,36 @@
 
 .see-all-works h3 {
   font-size: 32px;
-  font-weight: 500;
-  color: #fff;
+  font-weight: 600;
+  color: #3b270c;
 }
 
 .see-all-works p {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #1b180f;
   max-width: 250px;
 }
 
 .see-all-btn {
-  display: inline-block;
-  padding: 15px 35px;
-  font-size: 16px;
-  font-weight: 500;
-  color: #000;
-  background: var(--accentColor);
-  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  padding: 12px 30px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #97704f;
+  background: #595900;
+  border-radius: 999px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-top: 10px;
 }
 
 .see-all-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(194, 164, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Mobile: Stack work items vertically when GSAP pinning is disabled */
@@ -329,12 +392,8 @@
     line-height: 30px;
   }
 
-  .work-info h4 {
+  .work-card-text h4 {
     font-size: 18px;
-  }
-
-  .work-image img {
-    max-height: 200px;
   }
 
   .work-box-cta {

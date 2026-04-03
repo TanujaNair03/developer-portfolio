@@ -12,19 +12,20 @@
 
 .back-button {
   display: inline-block;
-  color: var(--accentColor);
+  color: #1b180f;
   text-decoration: none;
   font-size: 16px;
   margin-bottom: 30px;
   transition: all 0.3s ease;
   padding: 10px 20px;
-  border: 1px solid var(--accentColor);
+  border: 1px solid var(--highlightColor);
   border-radius: 30px;
 }
 
 .back-button:hover {
-  background: var(--accentColor);
+  background: var(--highlightColor);
   color: #000;
+  border-color: var(--highlightColor);
 }
 
 .myworks-header h1 {
@@ -62,8 +63,8 @@
 
 .myworks-card:hover {
   transform: translateY(-10px);
-  border-color: var(--accentColor);
-  box-shadow: 0 20px 40px rgba(194, 164, 255, 0.15);
+  border-color: var(--highlightColor);
+  box-shadow: 0 20px 40px rgba(233, 204, 177, 0.2);
 }
 
 .myworks-card-number {

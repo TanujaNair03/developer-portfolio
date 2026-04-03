@@ -12,23 +12,58 @@
   top: 0;
   z-index: 9999;
 }
-.header ul {
+.nav-actions {
   font-size: 11px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: 0;
   padding: 0;
   list-style: none;
-  column-gap: 20px;
-  row-gap: 6px;
-  align-items: end;
+  align-items: center;
+  gap: 8px;
 }
-.header ul li {
-  margin-left: 0px;
-  letter-spacing: 0.8px;
-  color: #ccc;
+.nav-actions li {
+  margin: 0;
+}
+.nav-chip {
+  border-radius: 999px;
+  padding: 10px 22px;
   font-weight: 600;
-  cursor: pointer;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: var(--accentColor);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nav-chip-1,
+.nav-chip-3 {
+  background-color: #595900;
+}
+.nav-chip-2 {
+  background-color: #354646;
+}
+.nav-chip-3 {
+  display: inline-flex;
+}
+.nav-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.nav-chip svg {
+  font-size: 18px;
+}
+
+.nav-link-hire {
+  display: inline-flex;
+}
+.nav-link-hire {
+  text-decoration: none;
 }
 .navbar-connect {
   position: absolute;
@@ -49,13 +84,10 @@
   .header {
     padding: 20px 0px;
   }
-  .header ul {
-    flex-direction: row;
+  .nav-actions {
     align-items: center;
+    gap: 20px;
     font-size: 14px;
-  }
-  .header ul li {
-    color: #eae5ec;
   }
   .navbar-title {
     font-size: 16px;
@@ -70,8 +102,8 @@
   .header {
     padding: 35px 0px;
   }
-  .header ul {
-    column-gap: 80px;
+  .nav-actions {
+    gap: 32px;
     font-size: 16px;
   }
   .navbar-connect {

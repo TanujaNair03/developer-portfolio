@@ -22,8 +22,8 @@ body:has(.play-page) {
   left: -150px;
   width: 300px;
   height: 300px;
-  background-color: #fb8dff;
-  box-shadow: inset -50px 40px 50px rgba(84, 0, 255, 0.6);
+  background-color: #f6f3e7;
+  box-shadow: inset -50px 40px 50px rgba(210, 180, 140, 0.5);
   filter: blur(60px);
   border-radius: 50%;
   opacity: 0.6;
@@ -39,7 +39,7 @@ body:has(.play-page) {
   right: -100px;
   width: 250px;
   height: 250px;
-  background-color: #c2a4ff;
+  background-color: #e9ccb1;
   box-shadow: inset -30px 30px 40px rgba(84, 0, 255, 0.5);
   filter: blur(70px);
   border-radius: 50%;
@@ -93,7 +93,7 @@ body:has(.play-page) {
 }
 
 .play-header .back-button:hover {
-  background: var(--accentColor);
+  background: var(--highlightColor);
   color: #000;
 }
 
@@ -381,7 +381,7 @@ body:has(.play-page) {
 }
 
 .game-status span.check {
-  color: #fb8dff;
+  color: var(--highlightColor);
   font-weight: 600;
 }
 
@@ -401,8 +401,8 @@ body:has(.play-page) {
   font-size: 12px;
   font-weight: 600;
   color: var(--accentColor);
-  background: rgba(194, 164, 255, 0.08);
-  border-bottom: 1px solid rgba(194, 164, 255, 0.1);
+  background: rgba(233, 204, 177, 0.5);
+  border-bottom: 1px solid rgba(233, 204, 177, 0.6);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -621,8 +621,8 @@ body:has(.play-page) {
 
 .chat-header {
   padding: 14px 16px;
-  background: rgba(194, 164, 255, 0.08);
-  border-bottom: 1px solid rgba(194, 164, 255, 0.1);
+  background: rgba(233, 204, 177, 0.35);
+  border-bottom: 1px solid rgba(233, 204, 177, 0.6);
 }
 
 .chat-title {
@@ -665,7 +665,7 @@ body:has(.play-page) {
 
 .chat-message.user {
   align-self: flex-end;
-  background: var(--accentColor);
+  background: var(--highlightColor);
   color: #0b080c;
   border-bottom-right-radius: 4px;
 }
@@ -744,7 +744,7 @@ body:has(.play-page) {
 }
 
 .chat-input:focus {
-  border-color: var(--accentColor);
+  border-color: var(--highlightColor);
 }
 
 .chat-send-btn {
@@ -753,7 +753,7 @@ body:has(.play-page) {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accentColor);
+  background: var(--highlightColor);
   border: none;
   border-radius: 8px;
   color: #0b080c;
@@ -764,7 +764,7 @@ body:has(.play-page) {
 
 .chat-send-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(194, 164, 255, 0.4);
+  box-shadow: 0 0 20px rgba(233, 204, 177, 0.45);
 }
 
 /* Responsive for chat */

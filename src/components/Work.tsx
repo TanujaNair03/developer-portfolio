@@ -1,10 +1,10 @@
 import "./styles/Work.css";
-import WorkImage from "./WorkImage";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import { config } from "../config";
 import { Link } from "react-router-dom";
+import CodeHoverCard from "./ui/CodeHoverCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,29 +66,29 @@ const Work = () => {
         </h2>
         <div className="work-flex">
           {config.projects.slice(0, 5).map((project, index) => (
-            <div 
-              className="work-box" 
-              key={project.id}
-              onClick={() => {
-                if (project.link) {
-                  window.open(project.link, "_blank");
-                }
-              }}
-              style={{ cursor: project.link ? 'pointer' : 'default' }}
-            >
-              <div className="work-info">
-                <div className="work-title">
-                  <h3>0{index + 1}</h3>
-
-                  <div>
-                    <h4>{project.title}</h4>
-                    <p>{project.category}</p>
+            <div className="work-box" key={project.id}>
+              <CodeHoverCard
+                id={`project-${project.id}`}
+                href={project.link}
+                className="code-hover-wrapper"
+                minHeight={360}
+                borderRadius={32}
+              >
+                <div className="work-card-text">
+                  <div className="work-title">
+                    <h3>0{index + 1}</h3>
+                    <div>
+                      <h4>{project.title}</h4>
+                      <p>{project.category}</p>
+                    </div>
                   </div>
                 </div>
+              </CodeHoverCard>
+
+              <div className="work-tools">
                 <h4>Tools and features</h4>
                 <p>{project.technologies}</p>
               </div>
-              <WorkImage image={project.image} alt={project.title} />
             </div>
           ))}
           {/* See All Works Button */}

@@ -1,0 +1,40 @@
+.interactive-grid-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #f6f3e7 40%, #d2b48c 120%);
+}
+
+.interactive-grid-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.interactive-grid-fade {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 0;
+}
+
+.dark-bg {
+  background-color: black;
+}
+
+.light-bg {
+  background-color: transparent;
+}
+
+.interactive-grid-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}

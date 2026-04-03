@@ -1,75 +1,80 @@
 .shimmer-btn-group {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 9999px;
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    background-color: #18181b; 
-    padding: 12px 32px; 
-    font-weight: 700;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-    color: white;
-  }
-  
-  .shimmer-btn-group:hover {
-    transform: scale(1.05);
-  }
-  
-  .shimmer-btn-group:active {
-    transform: scale(0.95);
-  }
-  
-  .shimmer-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 10;
-  }
-  
-  .shimmer-persistent-glow {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    background-image: linear-gradient(to top, rgba(194, 164, 255, 0.3), transparent);
-    pointer-events: none;
-    z-index: 0;
-  }
-  
-  .shimmer-btn-group:hover .shimmer-persistent-glow {
-    opacity: 1;
-  }
-  
-  .shimmer-content {
-    position: relative;
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  
-  .shimmer-border-reveal {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 1px;
-    background-image: linear-gradient(to right, var(--accentColor, #c481ff), transparent, var(--accentColor, #c481ff));
-    border-radius: 9999px;
-    pointer-events: none;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: destination-out;
-  }
-  
-  .shimmer-btn-group:hover .shimmer-border-reveal {
-    opacity: 1;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 9999px;
+  border: 1px solid rgba(233, 204, 177, 0.5);
+  background-color: #354646;
+  padding: 12px 32px;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #f6f3e7;
+}
+
+.shimmer-btn-group:hover {
+  transform: scale(1.05);
+}
+
+.shimmer-btn-group:active {
+  transform: scale(0.95);
+}
+
+.shimmer-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.shimmer-persistent-glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: linear-gradient(to top, rgba(233, 204, 177, 0.3), transparent);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.shimmer-btn-group:hover .shimmer-persistent-glow {
+  opacity: 1;
+}
+
+.shimmer-content {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shimmer-border-reveal {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1px;
+  background-image: linear-gradient(
+    to right,
+    var(--highlightColor, #e9ccb1),
+    transparent,
+    var(--highlightColor, #e9ccb1)
+  );
+  border-radius: 9999px;
+  pointer-events: none;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+}
+
+.shimmer-btn-group:hover .shimmer-border-reveal {
+  opacity: 1;
+}

@@ -3,6 +3,7 @@
   display: flex;
   text-wrap: nowrap;
   overflow: hidden;
+  color: var(--accentColor);
 }
 .hover-in {
   position: relative;
@@ -16,5 +17,5 @@
 }
 .hover-link:hover .hover-in {
   transform: translateY(-100%);
-  color: var(--accentColor);
+  color: #1b180f;
 }

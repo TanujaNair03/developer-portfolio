@@ -74,37 +74,53 @@ const Navbar = () => {
         >
           {config.social.email}
         </a>
-        <ul className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+        <ul className="nav-actions">
           <li>
-            <a data-href="#career" href="#career" className="scroll-link">
+            <a
+              href="#career"
+              data-href="#career"
+              className={`scroll-link nav-chip nav-chip-1`}
+              data-cursor="select"
+            >
               <HoverLinks text="EXPERIENCE" />
             </a>
           </li>
           <li>
-            <a data-href="#work" href="#work" className="scroll-link">
+            <a
+              href="#work"
+              data-href="#work"
+              className="scroll-link nav-chip nav-chip-2"
+              data-cursor="select"
+            >
               <HoverLinks text="PROJECTS" />
             </a>
           </li>
           <li>
-            <a 
-              href={config.contact.github} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              style={{ display: 'flex', alignItems: 'center', fontSize: '1.4rem', color: '#fff', textDecoration: 'none' }}
-              data-cursor="pointer"
+            <a
+              href={config.contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-chip nav-chip-3"
+              data-cursor="select"
+              aria-label="GitHub"
             >
               <FaGithub />
             </a>
           </li>
           <li>
-            <a 
-              href={config.contact.linkedin} 
-              target="_blank" 
+            <a
+              href={config.contact.linkedin}
+              target="_blank"
               rel="noopener noreferrer"
-              data-cursor="pointer"
-              style={{ textDecoration: 'none' }}
+              data-cursor="select"
+              className="nav-link-hire"
             >
-              <ShimmerButton>Hire Me</ShimmerButton>
+              <ShimmerButton
+                backgroundColor="#354646"
+                shimmerColor="rgba(255, 255, 255, 0.25)"
+              >
+                Hire Me
+              </ShimmerButton>
             </a>
           </li>
         </ul>

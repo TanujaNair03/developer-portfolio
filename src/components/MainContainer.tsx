@@ -5,6 +5,7 @@ import Landing from "./Landing";
 import Navbar from "./Navbar";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
+import InteractiveGridBackground from "./ui/InteractiveGridBackground";
 
 const MainContainer = ({ children }: PropsWithChildren) => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
@@ -35,16 +36,18 @@ const MainContainer = ({ children }: PropsWithChildren) => {
   }, [isDesktopView]);
 
   return (
-    <div className="container-main">
-      <Cursor />
-      <Navbar />
-      {isDesktopView && !isMobile && children}
+    <InteractiveGridBackground>
       <div className="container-main">
-        <Landing />
-        <Career />
-        <Work />
+        <Cursor />
+        <Navbar />
+        {isDesktopView && !isMobile && children}
+        <div className="container-main">
+          <Landing />
+          <Career />
+          <Work />
+        </div>
       </div>
-    </div>
+    </InteractiveGridBackground>
   );
 };
 
