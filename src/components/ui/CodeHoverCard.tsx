@@ -76,7 +76,7 @@ const CodeHoverCard: React.FC<CodeHoverCardProps> = ({
         onClick={handleCardClick}
       >
         <div className="code-hover-icon">
-          <FaGithub size={36} />
+          <FaGithub size={56} color="#1b180f" />
         </div>
 
         <div className="code-hover-overlay" style={{ ...maskStyle }}>

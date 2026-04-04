@@ -99,6 +99,12 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+body,
+button,
+a {
+  cursor: none !important;
+}
+
 .main-body {
   max-width: 100vw;
   overflow-x: hidden;
