@@ -1,5 +1,8 @@
+"use client";
+
 import { Link } from "react-router-dom";
 import { config } from "../config";
+import CodeHoverCard from "../components/ui/CodeHoverCard";
 import "./MyWorks.css";
 
 const MyWorks = () => {
@@ -17,26 +20,32 @@ const MyWorks = () => {
 
       <div className="myworks-grid">
         {config.projects.map((project, index) => (
-          <div 
-            className="myworks-card" 
-            key={project.id} 
+          <div
+            className="myworks-card"
+            key={project.id}
             data-cursor="disable"
             onClick={() => {
               if (project.link) {
                 window.open(project.link, "_blank");
               }
             }}
-            style={{ cursor: project.link ? 'pointer' : 'default' }}
+            style={{ cursor: project.link ? "pointer" : "default" }}
           >
             <div className="myworks-card-number">0{index + 1}</div>
-            <div className="myworks-card-image">
-              <img src={project.image} alt={project.title} />
-            </div>
-            <div className="myworks-card-info">
-              <h3>{project.title}</h3>
-              <p className="myworks-card-category">{project.category}</p>
-              <p className="myworks-card-description">{project.description}</p>
-              <p className="myworks-card-tech">{project.technologies}</p>
+            <CodeHoverCard
+              className="myworks-hover-card"
+              href={project.link}
+              borderRadius={28}
+              minHeight={260}
+            >
+              <div className="myworks-card-info">
+                <h3>{project.title}</h3>
+                <p className="myworks-card-category">{project.category}</p>
+              </div>
+            </CodeHoverCard>
+            <div className="myworks-card-tools">
+              <h4>Tools and features</h4>
+              <p>{project.technologies}</p>
             </div>
           </div>
         ))}

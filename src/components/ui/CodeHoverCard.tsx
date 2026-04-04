@@ -5,7 +5,6 @@ import { cn } from "../../lib/utils";
 import { FaGithub } from "react-icons/fa";
 
 export interface CodeHoverCardProps {
-  id: string;
   href?: string;
   className?: string;
   borderRadius?: number;
@@ -20,7 +19,6 @@ const DEFAULT_CHARSET =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 const CodeHoverCard: React.FC<CodeHoverCardProps> = ({
-  id,
   href,
   className,
   borderRadius = 28,
@@ -34,8 +32,7 @@ const CodeHoverCard: React.FC<CodeHoverCardProps> = ({
   const [randomText, setRandomText] = useState("");
   const cardRef = useRef<HTMLDivElement | null>(null);
 
-  const generateRandomString = (length: number, rows = 30) => {
-    const lineLength = 60;
+  const generateRandomString = (rows = 30, lineLength = 60) => {
     const lines: string[] = [];
     for (let row = 0; row < rows; row += 1) {
       const lineChars = Array.from({ length: lineLength }, () =>
@@ -53,7 +50,7 @@ const CodeHoverCard: React.FC<CodeHoverCardProps> = ({
     const x = Math.max(10, event.clientX - rect.left);
     const y = Math.max(10, event.clientY - rect.top);
     setPosition({ x, y });
-    setRandomText(generateRandomString(360));
+    setRandomText(generateRandomString());
   };
 
   const handleCardClick = () => {

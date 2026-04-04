@@ -132,9 +132,6 @@ const SmoothCursor = ({
 }: SmoothCursorProps) => {
   const [isVisible, setIsVisible] = useState(true);
   const [trail, setTrail] = useState<Position[]>([]);
-  const [isMoving, setIsMoving] = useState(false);
-  const [isClicking, setIsClicking] = useState(false);
-
   const lastMousePos = useRef<Position>({ x: 0, y: 0 });
   const velocity = useRef<Position>({ x: 0, y: 0 });
   const lastUpdateTime = useRef(Date.now());
@@ -230,11 +227,10 @@ const SmoothCursor = ({
         previousAngle.current = currentAngle;
 
         scale.set(0.95);
-        setIsMoving(true);
+        // visual state handled by springs directly
 
         const timeout = setTimeout(() => {
           scale.set(1);
-          setIsMoving(false);
         }, 150);
 
         return () => clearTimeout(timeout);
@@ -255,14 +251,12 @@ const SmoothCursor = ({
 
     const handleMouseDown = () => {
       if (scaleOnClick) {
-        setIsClicking(true);
         scale.set(0.8);
       }
     };
 
     const handleMouseUp = () => {
       if (scaleOnClick) {
-        setIsClicking(false);
         scale.set(1);
       }
     };

@@ -68,7 +68,6 @@ const Work = () => {
           {config.projects.slice(0, 5).map((project, index) => (
             <div className="work-box" key={project.id}>
               <CodeHoverCard
-                id={`project-${project.id}`}
                 href={project.link}
                 className="code-hover-wrapper"
                 minHeight={360}
